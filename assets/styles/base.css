@@ -1,0 +1,41 @@
+:root {
+  --blender-orange: #f5792a;
+  --blender-blue: #3a6ea5;
+  --blender-light: #f7f7fa;
+  --blender-gray: #e3e3e3;
+  --blender-dark: #232323;
+  --card-shadow: 0 2px 8px rgba(60,60,60,0.08);
+}
+
+html, body {
+  background: var(--blender-light);
+  color: var(--blender-dark);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Box-sizing global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Pseudo-clases estructurales */
+ul li:first-child {
+  font-weight: bold;
+}
+
+ul li:last-child {
+  opacity: 0.85;
+}
+
+ol li:nth-child(2n) {
+  background: #f7f7fa;
+}
+
+ul li:not(.activo) {
+  border-left: 2px solid transparent;
+}

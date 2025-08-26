@@ -12,28 +12,30 @@
 </head>
 <body>
   <header id="inicio">
-    <h1>Happy Blender Day 2025</h1>
-    <p>Charlas y talleres para principiantes: de la famosa dona a personajes low-poly.</p>
-    <figure>
-      <img src="assets/images/Blender-Logo-3D-Software.png" alt="Logotipo de Blender" width="130" height="110" tabindex="0">
-      <figcaption>Blender: software libre para 3D, VFX y más.</figcaption>
-    </figure>
-    <nav aria-label="Menú principal">
-      <ul>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#expositores">Expositores</a></li>
-        <li><a href="#registro">Registro</a></li>
-        <li><a href="#ubicacion">Ubicación</a></li>
-        <li><a href="#patrocinadores">Patrocinadores</a></li>
-        <li><a href="https://www.blender.org" target="_blank" rel="noopener noreferrer" aria-label="Ir al sitio oficial de Blender en una nueva pestaña">Sitio oficial de Blender ↗</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Happy Blender Day 2025</h1>
+      <p>Charlas y talleres para principiantes: de la famosa dona a personajes low-poly.</p>
+      <figure>
+        <img src="assets/images/Blender-Logo-3D-Software.png" alt="Logotipo de Blender" width="130" height="110" tabindex="0">
+        <figcaption>Blender: software libre para 3D, VFX y más.</figcaption>
+      </figure>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#expositores">Expositores</a></li>
+          <li><a href="#registro">Registro</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#patrocinadores">Patrocinadores</a></li>
+          <li><a href="https://www.blender.org" target="_blank" rel="noopener noreferrer" aria-label="Ir al sitio oficial de Blender en una nueva pestaña">Sitio oficial de Blender</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section aria-labelledby="intro-title">
       <h2 id="intro-title">¿Qué es Happy Blender Day?</h2>
-      <article>
+      <article class="card">
         <h3>Un evento para aprender, crear y conectar</h3>
         <p>
           Happy Blender Day es una jornada educativa y creativa dedicada a quienes quieren iniciarse en el mundo 3D con Blender. 
@@ -59,7 +61,7 @@
 
     <section id="agenda" aria-labelledby="agenda-title">
       <h2 id="agenda-title">Agenda</h2>
-      <article>
+      <article class="card">
         <h3>Mini-agenda del día</h3>
         <table>
           <thead>
@@ -80,7 +82,7 @@
           </tbody>
         </table>
       </article>
-      <article>
+      <article class="card">
         <h3>Objetivos del taller</h3>
         <ol>
           <li>Navegar la interfaz y atajos esenciales.</li>
@@ -97,26 +99,28 @@
     <section id="expositores" aria-labelledby="speakers-title">
       <h2 id="speakers-title">Expositores</h2>
 
-      <article>
-        <h3>Ana Rodríguez</h3>
+      <article class="card">
         <img src="assets/images/mujer.jpg" alt="Retrato de Ana Rodríguez sonriendo" width="180">
-        <p><strong>Artista 3D</strong></p>
-        <ul>
-          <li>Especialista en look-dev y materiales PBR</li>
-          <li>Pipeline libre y texturizado procedural</li>
-          <li>Experiencia en animación para cortos</li>
-        </ul>
+        <div>
+          <h3>Ana Rodríguez <span class="badge" style="background:var(--blender-orange);color:#fff;border-radius:8px;padding:0.2em 0.7em;font-size:0.9em;margin-left:0.5em;">Artista 3D</span></h3>
+          <ul>
+            <li>Especialista en look-dev y materiales PBR</li>
+            <li>Pipeline libre y texturizado procedural</li>
+            <li>Experiencia en animación para cortos</li>
+          </ul>
+        </div>
       </article>
 
-      <article>
-        <h3>Luis Morales</h3>
+      <article class="card">
         <img src="assets/images/hombre.png" alt="Retrato de Luis Morales con fondo neutro" width="180">
-        <p><strong>Generalista 3D</strong></p>
-        <ul>
-          <li>Low-poly estilizado y optimización para tiempo real</li>
-          <li>Desarrollo de videojuegos indie</li>
-          <li>Docente en modelado digital</li>
-        </ul>
+        <div>
+          <h3>Luis Morales <span class="badge" style="background:var(--blender-blue);color:#fff;border-radius:8px;padding:0.2em 0.7em;font-size:0.9em;margin-left:0.5em;">Generalista 3D</span></h3>
+          <ul>
+            <li>Low-poly estilizado y optimización para tiempo real</li>
+            <li>Desarrollo de videojuegos indie</li>
+            <li>Docente en modelado digital</li>
+          </ul>
+        </div>
       </article>
 
       <p>
@@ -128,7 +132,7 @@
 
     <section id="registro" aria-labelledby="registro-title">
       <h2 id="registro-title">Registro</h2>
-      <article>
+      <article class="card">
         <h3>Inscríbete al evento</h3>
         <form action="#" method="post" aria-labelledby="registro-title">
           <fieldset>
@@ -154,7 +158,7 @@
             <label><input type="radio" name="nivel" value="basico"> Básico</label>
             <label><input type="radio" name="nivel" value="intermedio"> Intermedio</label>
           </fieldset>
-          <button type="submit" aria-label="Enviar registro al evento">Enviar registro</button>
+          <button type="submit" class="btn" aria-label="Enviar registro al evento">Enviar registro</button>
         </form>
         <p>Recibirás un correo con los detalles y materiales previos al taller.</p>
       </article>
@@ -164,7 +168,7 @@
 
     <section id="ubicacion" aria-labelledby="ubicacion-title">
       <h2 id="ubicacion-title">Ubicación</h2>
-      <article>
+      <article class="card">
         <h3>TEC Centro Académico de Limón</h3>
         <p>
           El evento se realizará en el auditorio principal del TEC Limón, con acceso para personas con discapacidad, parqueo gratuito y cafetería abierta.
@@ -189,7 +193,6 @@
     <section id="patrocinadores" aria-labelledby="sponsors-title">
       <h2 id="sponsors-title">Patrocinadores</h2>
       <article>
-        <h3>Gracias por el apoyo</h3>
         <figure>
           <img src="assets/images/cyros.jpg" alt="Panel con logotipos de patrocinadores en un evento" width="120">
           <figcaption>Pollos Cyrus</figcaption>

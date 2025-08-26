@@ -1,0 +1,7 @@
+.card .badge {
+  font-size: 1em !important;
+  padding: 0.3em 0.8em !important;
+  background: var(--blender-orange) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+}

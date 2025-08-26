@@ -1,0 +1,111 @@
+/* Cards y formularios */
+article {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  padding: 1.2rem 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+/* Formulario */
+form {
+  background: var(--blender-gray);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  padding: 1.2rem 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.8em;
+}
+
+legend {
+  font-weight: 600;
+  color: var(--blender-blue);
+  margin-bottom: 0.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 1rem;
+  color: var(--blender-dark);
+}
+
+input[type="text"], input[type="email"], select {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid var(--blender-blue);
+  margin-bottom: 0.7em;
+  font-size: 1rem;
+  background: #fff;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 0.5em;
+  accent-color: var(--blender-orange);
+}
+
+/* Botones */
+button[type="submit"], .btn {
+  background: var(--blender-orange);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+  transition: background 0.2s;
+  margin-top: 0.5em;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover, .btn:hover {
+  background: var(--blender-blue);
+}
+
+/* Pseudo-clase de estado faltante */
+button[type="submit"]:active, .btn:active {
+  transform: translateY(1px);
+  background: #d4661f;
+}
+
+/* Tags decorativos */
+.tag {
+  display: inline-block;
+  background: var(--blender-blue);
+  color: #fff;
+  padding: 0.2em 0.6em;
+  border-radius: 8px;
+  font-size: 0.85em;
+}
+
+/* Overflow en cards */
+.card p {
+  max-height: 8em;
+  overflow: auto;
+  padding-right: 0.5em;
+}
+
+a[href^="https://"] {
+  position: relative;
+  padding-right: 1.2em;
+}
+
+a[href^="https://"]::after {
+  content: " ↗";
+  position:static;
+  color: var(--blender-blue);
+  font-size: large;
+}
