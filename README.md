@@ -1,69 +1,73 @@
-# Happy Blender Day 2025 - Sitio del Evento
+# Happy Blender Day - Laboratorio CSS3
 
-## Descripción
-Sitio web para el evento "Happy Blender Day 2025", que ofrece charlas y talleres de introducción a Blender para principiantes. Incluye agenda, información de expositores, formulario de registro, ubicación y patrocinadores.
+## Selectores aplicados
 
----
+- **Selectores de tipo**:  
+  - `header`, `nav`, `section`, `article`, `figure`, `figcaption`, `p`, `h1`, `h2`, `h3`, `ul`, `ol`, `li`, `table`, `th`, `td`, `blockquote`.
 
-## Estructura Semántica
-- **`<header>`**: Cabecera con logo, título y navegación principal.
-- **`<nav>`**: Menú de enlaces internos y externos.
-- **`<main>`**: Contenido principal del sitio.
-- **`<section>`**: Divide las secciones temáticas (agenda, expositores, etc.).
-- **`<article>`**: Contenido independiente dentro de secciones (ej: detalles de talleres).
-- **`<figure>` + `<figcaption>`**: Imágenes con descripciones accesibles.
-- **`<footer>`**: Información de derechos y enlace de retorno.
+- **Selectores de clase**:  
+  - `.container` → contenedores principales  
+  - `.card` → tarjetas de secciones (agenda, expositores, registro, ubicación)  
+  - `.btn` → botones de registro  
+  - `.badge` → etiquetas de expositores  
+  - `.tag` → elementos decorativos (si se agregan)  
 
----
+- **Selectores de ID**:  
+  - `#inicio` → header  
+  - `#agenda`, `#expositores`, `#registro`, `#ubicacion`, `#patrocinadores` → secciones principales  
 
-## URL Pública
-[Despliegue en Github Pages](https://mittuu.github.io/Laboratorio-2_Estructura-y-Semantica)
+- **Selectores de atributo**:  
+  - `a[target="_blank"]` → enlace externo a Blender.org  
+  - `img[alt]` → todas las imágenes con atributo alt  
+  - `input[type="email"]` → campo de correo en el formulario  
+  - `a[href^="https://"]` → enlaces externos (se añadió indicador "↗")  
 
----
+- **Selectores combinadores**:  
+  - Descendiente: `.card p` → párrafos dentro de tarjetas  
+  - Hijo directo: `header > nav` → menú principal  
+  - Adyacente: `nav a + a` → separación de enlaces en menú  
+  - Hermanos: `.tag ~ .tag` → etiquetas decorativas (ejemplo futuro)  
 
-## Validación W3C
-- **Resultado**: Documento HTML válido sin errores.  
-<div style="text-align: center;">
-  <img src="assets/htmlChecker.png" alt="NU HTML Checker" style="max-width: 500px; height: auto;">
-</div>
+## Pseudo-clases
 
----
+- **Estado**:  
+  - `:hover` → `.btn` y enlaces en el menú  
+  - `:focus-visible` → enlaces en nav y botones  
+  - `:active` → botones de formulario  
 
-## Lighthouse
-### Puntuaciones (Desktop):
-#### **Rendimiento**: 100/100 
-<div style="text-align: center;">
-  <img src="assets/performance.png" alt="Performance" style="max-width: 800px; height: auto;">
-</div>
+- **Estructurales**:  
+  - `:first-child` → primer elemento de listas (`ul` de agenda y expositores)  
+  - `:last-child` → último elemento de listas  
+  - `:nth-child(2n)` → elementos pares en listas  
+  - `:not(.activo)` → ejemplo preparado para exclusiones de clases  
 
-#### **Accesibilidad**: 96/100 *(Mejora: tamaño de touch targets)*
-<div style="text-align: center;">
-  <img src="assets/accessibility.png" alt="Accessibility" style="max-width: 800px; height: auto;">
-</div>
+## Especificidad
 
-#### **Mejores Prácticas**: 96/100 *(Mejora: política HSTS fuerte)*
-<div style="text-align: center;">
-  <img src="assets/bestPractices.png" alt="best practices" style="max-width: 800px; height: auto;">
-</div>
+- **!important**:  
+  - `.badge` dentro de `.card` → sobrescritura en `overrides.css`  
+- **Estilo inline**:  
+  - `<h3>` de cada expositor → color y fondo inline para la badge  
 
-#### **SEO**: 100/100
-<div style="text-align: center;">
-  <img src="assets/seo.png" alt="SEO" style="max-width: 800px; height: auto;">
-</div>
+## Box model
 
-### Plan de Mejoras:
-1. **Optimizar imágenes**: Reducir peso sin perder calidad (ahorro estimado: 418 KiB).
-2. **Cache eficiente**: Ajustar cabeceras HTTP (ahorro estimado: 436 KiB).
-3. **Accesibilidad**: Aumentar tamaño de botones y enlaces para dispositivos táctiles.
+- `box-sizing: border-box` → aplicado global en `base.css`  
+- Márgenes y padding controlados en `.card`, `section > h2`, `main > section`  
+- Colapso de márgenes entre títulos y tarjetas  
 
----
+## Overflow
 
-## Accesibilidad Aplicada
-- **`tabindex`**: 
-  - `tabindex="0"` en logo para enfoque con teclado.
-  - `tabindex="-1"` en imágenes decorativas (ej: dona) para excluirlas del tabulado.
-- **`aria-*`**:
-  - `aria-label` en menú principal y botones (ej: "Menú principal", "Enviar registro").
-  - `aria-labelledby` en secciones para asociar títulos con contenido.
-- **`alt`**: Texto descriptivo en todas las imágenes (ej: "Logotipo de Blender").
-- **Enlaces descriptivos**: Textos claros (ej: "Sitio oficial de Blender ↗") y `rel="noopener"` para seguridad.
+- Párrafo con texto largo en `.card` del registro y agenda  
+- `overflow: auto` o `hidden` según necesidad  
+
+## Flexbox
+
+- `nav ul` → `display: flex` para alinear enlaces con `justify-content: center; gap: 1.5rem`  
+
+## Grid
+
+- `#patrocinadores article` → `display: grid` para organizar logotipos de patrocinadores  
+- Columnas definidas con `grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));`  
+
+## Position
+
+- `.banner .etiqueta` → `position: relative` en contenedor, `absolute` en la etiqueta decorativa (preparado si se implementa un banner adicional)  
