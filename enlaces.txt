@@ -1,2 +1,2 @@
-GitHub: https://github.com/MITTuu/Laboratorio-2_Estructura-y-Semantica
-GitHub Pages: https://mittuu.github.io/Laboratorio-2_Estructura-y-Semantica
+GitHub - branch lab3: https://github.com/MITTuu/Laboratorio-2_Estructura-y-Semantica/tree/lab3-selectores-boxmodel
+netlify: https://68ad372431af6c00071b5829--taupe-cupcake-759203.netlify.app
